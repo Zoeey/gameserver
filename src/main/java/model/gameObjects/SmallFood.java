@@ -1,6 +1,6 @@
 package model.gameObjects;
 
-import model.Location;
+import model.gameInfo.Location;
 
 /**
  * Created by User on 10.10.2016.

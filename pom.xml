@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>HomeWork1</groupId>
-    <artifactId>HomeWork1</artifactId>
+    <groupId>gameserver</groupId>
+    <artifactId>gameserver</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -24,6 +24,9 @@
         <jetty.version>9.3.12.v20160915</jetty.version>
         <jersey.version>2.7</jersey.version>
         <log4j.version>2.6.2</log4j.version>
+        <postgresql.version>9.4-1200-jdbc41</postgresql.version>
+        <hibernate.version>5.2.3.Final</hibernate.version>
+        <jpa.version>2.1.0</jpa.version>
     </properties>
 
 
@@ -98,10 +101,29 @@
             <artifactId>log4j-api</artifactId>
             <version>${log4j.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>${jpa.version}</version>
         </dependency>
 
 

@@ -2,8 +2,7 @@ package matchMakerTests;
 
 import matchmaker.MatchMaker;
 import matchmaker.SinglePlayerMatchMaker;
-import model.GameConstants;
-import model.Player;
+import model.gameInfo.Player;
 import org.junit.Test;
 
 import org.junit.Assert;

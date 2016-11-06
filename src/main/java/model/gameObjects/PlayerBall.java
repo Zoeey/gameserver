@@ -1,7 +1,7 @@
 package model.gameObjects;
 
 import matchmaker.SinglePlayerMatchMaker;
-import model.Location;
+import model.gameInfo.Location;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

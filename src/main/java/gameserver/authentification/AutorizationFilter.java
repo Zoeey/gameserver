@@ -1,7 +1,7 @@
 package gameserver.authentification;
 
-import gameserver.authInfo.Token;
-import gameserver.authInfo.TokenUserStorage;
+import model.authInfo.Token;
+import model.authInfo.TokenUserStorage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,7 +32,7 @@ public class AutorizationFilter implements ContainerRequestFilter {
 
         String token = authorizationHeader.substring("Bearer".length()).trim();
 
-        try {
+        /*try {
             Authentification.validateToken(Token.getTokenObjectByString(token));
             Authentification.setAutorizedUser(TokenUserStorage.getUserByToken(
                     Token.getTokenObjectByString(token)));
@@ -40,6 +40,6 @@ public class AutorizationFilter implements ContainerRequestFilter {
             log.info("Wrong token from user");
             containerRequestContext.abortWith(
                     Response.status(Response.Status.UNAUTHORIZED).build());
-        }
+        }*/
     }
 }

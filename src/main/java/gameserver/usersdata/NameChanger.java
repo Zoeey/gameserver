@@ -1,8 +1,8 @@
 package gameserver.usersdata;
 
-import gameserver.authInfo.Token;
-import gameserver.authInfo.TokenUserStorage;
-import gameserver.authInfo.User;
+import model.authInfo.Token;
+import model.authInfo.TokenUserStorage;
+import model.authInfo.User;
 import gameserver.authentification.Authentification;
 import gameserver.authentification.Autorized;
 import org.apache.logging.log4j.LogManager;

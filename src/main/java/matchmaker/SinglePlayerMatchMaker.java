@@ -1,13 +1,12 @@
 package matchmaker;
 
-import model.GameSession;
-import model.Player;
-import model.SessionIsFullException;
-import model.SingleGameSession;
+import model.gameInfo.GameSession;
+import model.gameInfo.Player;
+import model.gameInfo.SessionIsFullException;
+import model.gameInfo.SingleGameSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.List;
