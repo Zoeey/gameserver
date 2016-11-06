@@ -68,7 +68,6 @@ public class LBtest {
             System.out.println(false);
         }
         Assert.assertEquals(0,LB.getUserScore(user));
-        LB.deleteUser(user);
     }
 
     @Test
