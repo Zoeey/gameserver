@@ -1,13 +1,12 @@
 package gameserver.authentification;
 
+import model.authDAO.LB;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import gameserver.authInfo.Token;
-import gameserver.authInfo.TokenUserStorage;
-import gameserver.authInfo.User;
-import gameserver.authInfo.UsersJSON;
+import model.authInfo.Token;
+import model.authInfo.TokenUserStorage;
+import model.authInfo.User;
 
-import javax.jws.soap.SOAPBinding;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
@@ -45,13 +44,14 @@ public class Authentification {
             if (login == null || password == null) {
                 return Response.status(Response.Status.BAD_REQUEST).build();
             }
-            User currentUser = new User(login, password);
+            User currentUser = new User(login,password,"a");
             if (registeredUsers.contains(currentUser)) {
                 log.info("User '{}' already exists", currentUser);
                 return Response.status(Response.Status.NOT_ACCEPTABLE).build();
             }
             registeredUsers.add(currentUser);
             log.info("New user '{}' registered", currentUser);
+            LB.insert(login);
             return Response.ok("User " + currentUser + " registered").build();
         } catch (Exception e){
             log.info("Error register user.");
@@ -69,7 +69,7 @@ public class Authentification {
             if (login == null || password == null) {
                 return Response.status(Response.Status.BAD_REQUEST).build();
             }
-            User currentUser = new User(login, password);
+            User currentUser = new User("a","a","a");
             if (!validatePassword(currentUser)) {
                 log.info("Wrong password for user {}", currentUser);
                 return Response.status(Response.Status.UNAUTHORIZED).build();
